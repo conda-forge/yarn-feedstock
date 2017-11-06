@@ -1,6 +1,6 @@
 {% set name = "yarn" %}
-{% set version = "0.25.2" %}
-{% set sha256 = "d1484fb8d1b28fec377c3379696d579dbf79c041acb240cd0dd7a5e041d7d829" %}
+{% set version = "1.3.2" %}
+{% set sha256 = "6cfe82e530ef0837212f13e45c1565ba53f5199eec2527b85ecbcd88bf26821d" %}
 
 package:
   name: {{ name|lower }}
@@ -21,7 +21,7 @@ requirements:
 
 test:
   commands:
-    - yarn --version
+    - yarn --version | grep {{ version }}
 
 about:
   home: https://yarnpkg.com

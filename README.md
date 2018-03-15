@@ -17,9 +17,7 @@ quickly, securely, and reliably so you don’t ever have to worry.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/yarn-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/yarn-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/yarn-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/yarn-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/yarn-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/yarn-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/yarn-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/yarn-feedstock)
 
 Current release info
 ====================

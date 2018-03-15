@@ -20,7 +20,7 @@ requirements:
 
 test:
   commands:
-    - yarn --version
+    - yarn --version | grep {{ version }}
 
 about:
   home: https://yarnpkg.com

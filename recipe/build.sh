@@ -1,4 +1,2 @@
-mkdir -p $PREFIX/bin $PREFIX/lib
-
-cp bin/* $PREFIX/bin
-cp lib/* $PREFIX/lib
+#!/bin/bash
+cp -r ./bin ./lib "${PREFIX}"

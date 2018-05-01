@@ -17,14 +17,16 @@ quickly, securely, and reliably so you don’t ever have to worry.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/yarn-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/yarn-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/yarn-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/yarn-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/yarn-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/yarn-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/yarn-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/yarn-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/yarn-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/yarn-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/yarn-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/yarn-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/yarn/badges/version.svg)](https://anaconda.org/conda-forge/yarn)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/yarn/badges/downloads.svg)](https://anaconda.org/conda-forge/yarn)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-yarn-green.svg)](https://anaconda.org/conda-forge/yarn) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/yarn.svg)](https://anaconda.org/conda-forge/yarn) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/yarn.svg)](https://anaconda.org/conda-forge/yarn) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/yarn.svg)](https://anaconda.org/conda-forge/yarn) |
 
 Installing yarn
 ===============

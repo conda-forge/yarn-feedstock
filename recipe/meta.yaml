@@ -1,6 +1,6 @@
 {% set name = "yarn" %}
-{% set version = "1.6.0" %}
-{% set sha256 = "a57b2fdb2bfeeb083d45a883bc29af94d5e83a21c25f3fc001c295938e988509" %}
+{% set version = "1.7.0" %}
+{% set sha256 = "e7720ee346b2bd7ec32b7e04517643c38648f5022c7981168321ba1636f2dca3" %}
 
 package:
   name: {{ name|lower }}

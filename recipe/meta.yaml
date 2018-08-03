@@ -2,11 +2,10 @@
 {% set version = "1.9.4" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-v{{ version }}.tar.gz
   url: https://registry.npmjs.org/{{ name }}/-/{{ name }}-{{ version }}.tgz
   # this is published on npm
   sha1: 3b82d8446b652775723900b470d966861976924b

@@ -1,18 +1,19 @@
 {% set name = "yarn" %}
-{% set version = "1.8.0" %}
-{% set sha256 = "3d8dc87cae99f7547b82026f818b3a14f0393cfa09337bb9adfb446d50a527a7" %}
+{% set version = "1.9.4" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-v{{ version }}.tar.gz
-  url: https://github.com/yarnpkg/{{ name }}/releases/download/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://registry.npmjs.org/{{ name }}/-/{{ name }}-{{ version }}.tgz
+  # this is published on npm
+  sha1: 3b82d8446b652775723900b470d966861976924b
+  # this is calculated
+  sha256: 7667eb715077b4bad8e2a832e7084e0e6f1ba54d7280dc573c8f7031a7fb093e
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   run:
@@ -21,6 +22,7 @@ requirements:
 test:
   commands:
     - yarn --version
+    - yarn versions
 
 about:
   home: https://yarnpkg.com

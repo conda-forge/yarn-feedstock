@@ -1,5 +1,5 @@
 {% set name = "yarn" %}
-{% set version = "1.12.3" %}
+{% set version = "1.13.0" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://registry.npmjs.org/{{ name }}/-/{{ name }}-{{ version }}.tgz
   # this is published on npm
-  sha1: fb4599bf1f8da01552bcc7e1571dfd4e53788203
+  sha1: affa9c956739548024068532a902cf18c9cb523f
   # this is calculated
   sha256: 83277bd505c7f4009c13077266020c97298727de7edf67af5ca66eccae9d4632
 

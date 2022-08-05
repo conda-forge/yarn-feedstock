@@ -11,6 +11,8 @@ source:
 
 build:
   number: 0
+  # nodejs isn't available on s390x
+  skip: True # [linux and s390x]
 
 requirements:
   run:

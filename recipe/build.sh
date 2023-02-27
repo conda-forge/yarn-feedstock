@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-mkdir -p $PREFIX/bin $PREFIX/lib
 
-cp bin/* $PREFIX/bin
-cp lib/* $PREFIX/lib
+set -eux
+
+mkdir -p "${PREFIX}/bin"
+chmod 755 bin/*
+cp bin/* "${PREFIX}/bin"

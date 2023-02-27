@@ -1,2 +1,3 @@
-xcopy /s /y bin\* %LIBRARY_BIN%
-xcopy /s /y lib\* %LIBRARY_LIB%
+@echo on
+
+xcopy /s /y bin\* "%LIBRARY_BIN%" || exit 1

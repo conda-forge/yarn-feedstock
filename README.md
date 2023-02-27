@@ -1,93 +1,32 @@
-About yarn
-==========
+About yarn-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/yarn-feedstock/blob/main/LICENSE.txt)
 
 Home: https://yarnpkg.com
 
 Package license: BSD-2-Clause
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/yarn-feedstock/blob/main/LICENSE.txt)
-
 Summary: Fast, reliable, and secure dependency management.
 
-Development: https://github.com/yarnpkg/yarn
+Development: https://github.com/yarnpkg/berry
 
-Documentation: https://github.com/yarnpkg/yarn/docs
+Documentation: https://yarnpkg.com/getting-started
 
 Yarn is a package manager for your code. It allows you to use and share
 code with other developers from around the world. Yarn does this
-quickly, securely, and reliably so you don’t ever have to worry.
+quickly, securely, and reliably so you don't ever have to worry.
 
 
 Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
+<table><tr><td>All platforms:</td>
     <td>
-      <a href="https://app.travis-ci.com/conda-forge/yarn-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/yarn-feedstock/main.svg?label=Linux">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4441&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/yarn-feedstock?branchName=main">
       </a>
-    </td>
-  </tr>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4441&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/yarn-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4441&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/yarn-feedstock?branchName=main&jobName=linux&configuration=linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4441&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/yarn-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4441&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/yarn-feedstock?branchName=main&jobName=linux&configuration=linux_ppc64le_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4441&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/yarn-feedstock?branchName=main&jobName=osx&configuration=osx_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_arm64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4441&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/yarn-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4441&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/yarn-feedstock?branchName=main&jobName=win&configuration=win_64_" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
     </td>
   </tr>
 </table>

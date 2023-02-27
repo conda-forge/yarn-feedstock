@@ -34,6 +34,7 @@ test:
     - yarn versions
   requires:
     - m2-grep  # [win]
+    - git
 
 about:
   home: https://yarnpkg.com

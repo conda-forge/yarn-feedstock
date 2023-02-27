@@ -31,7 +31,8 @@ test:
     - yarn --version | grep -iE "^{{ version.replace(".", "\.") }}$"
     - yarn --help
     - yarn init
-    - yarn versions
+    - yarn add lodash
+    - yarn install --immutable --immutable-cache
   requires:
     - m2-grep  # [win]
     - git

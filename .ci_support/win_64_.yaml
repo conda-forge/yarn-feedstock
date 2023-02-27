@@ -1,6 +1,6 @@
 channel_sources:
 - conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge yarn_rc
 noarch_platform:
 - win

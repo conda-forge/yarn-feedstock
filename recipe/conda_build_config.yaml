@@ -1,3 +1,5 @@
 noarch_platform:
   - unix  # [linux]
   - win  # [win]
+channel_targets:
+- conda-forge yarn_rc

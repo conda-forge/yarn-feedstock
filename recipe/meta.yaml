@@ -1,5 +1,5 @@
 {% set name = "yarn" %}
-{% set version = "4.3.0" %}
+{% set version = "4.3.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://registry.npmjs.org/@yarnpkg/cli-dist/-/cli-dist-{{ version }}.tgz
-    sha256: c5d36383ad062295a12942c829aeb8471d417bf4b09a2abe582cfa8948538b78
+    sha256: 9acaaff6dcfdfa9d250b6816df9036556f1d7d4a416ff1bb2ba384d35efa1281
   - url: https://raw.githubusercontent.com/yarnpkg/berry/%40yarnpkg/cli/{{ version }}/LICENSE.md
     sha256: 238d933f5c226cc197bd1dae2ad0c468e157b4cba8ed844f81549ba6db777dc4
 

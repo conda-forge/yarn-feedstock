@@ -1,7 +1,7 @@
 {% set version = "4.5.1" %}
 
 package:
-  name: yan
+  name: yarn
   version: {{ version }}
 
 source:

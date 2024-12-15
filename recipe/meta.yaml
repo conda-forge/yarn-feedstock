@@ -1,13 +1,12 @@
-{% set name = "yarn" %}
-{% set version = "1.22.19" %}
+{% set version = "1.22.22" %}
 
 package:
-  name: {{ name }}
+  name: yarn
   version: {{ version }}
 
 source:
-  url: https://registry.npmjs.org/{{ name }}/-/{{ name }}-{{ version }}.tgz
-  sha1: 4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447
+  url: https://registry.npmjs.org/yarn/-/yarn-{{ version }}.tgz
+  sha256: c17d3797fb9a9115bf375e31bfd30058cac6bc9c3b8807a3d8cb2094794b51ca
 
 build:
   number: 0
@@ -30,7 +29,7 @@ about:
   description: |
     Yarn is a package manager for your code. It allows you to use and share
     code with other developers from around the world. Yarn does this
-    quickly, securely, and reliably so you don’t ever have to worry.
+    quickly, securely, and reliably so you don't ever have to worry.
   doc_url: https://github.com/yarnpkg/yarn/docs
   dev_url: https://github.com/yarnpkg/yarn
 

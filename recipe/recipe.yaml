@@ -22,8 +22,8 @@ build:
   script:
     - if: win
       then:
-        - xcopy /s /y bin\* "${{ PREFIX }}/Library/bin" || exit 1
-        - dir "${{ PREFIX }}/Library/bin" || exit 1
+        - xcopy /s /y bin\* "${{ PREFIX }}\Library\bin\" || exit 1
+        - dir "${{ PREFIX }}\Library\bin\" || exit 1
       else:
         - mkdir -p "${{ PREFIX }}/bin"
         - chmod 755 bin/*

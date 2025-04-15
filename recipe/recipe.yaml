@@ -22,8 +22,8 @@ build:
   script:
     - if: win
       then:
-        - xcopy /s /y bin\* "${{ PREFIX }}\Library\bin\" || exit 1
-        - dir "${{ PREFIX }}\Library\bin\" || exit 1
+        - xcopy /s /y bin\* "${{ PREFIX }}\Library\bin\"  || exit 1
+        - dir "${{ PREFIX }}\Library\bin\yarn.cmd"        || exit 1
       else:
         - mkdir -p "${{ PREFIX }}/bin"
         - chmod 755 bin/*
@@ -39,13 +39,10 @@ tests:
   - requirements:
       run:
         - nodejs ${{ nodejs_min }}.*
+        - pytest
     script:
-      - yarn --version                                                                                                   || exit 1
-      - yarn --version | node -e "process.stdin.on('data', (d) => process.exit(d.toString().indexOf('${{ version }}')))" || exit 1
-      - yarn init                                                                                                        || exit 1
-      - yarn add lodash                                                                                                  || exit 1
-      - yarn install --immutable --immutable-cache                                                                       || exit 1
-      - yarn --help                                                                                                      || exit 1
+      interpreter: python
+      file: run_test.py
 
 about:
   license: BSD-2-Clause

@@ -17,18 +17,18 @@ source:
     sha256: 238d933f5c226cc197bd1dae2ad0c468e157b4cba8ed844f81549ba6db777dc4
 
 build:
-  number: 0
+  number: 1
   noarch: generic
   script:
     - if: win
       then:
-        - xcopy /s /y bin\* "%LIBRARY_BIN%"
-        - dir "%LIBRARY_BIN%"
+        - xcopy /s /y bin\* "${{ PREFIX }}/Library/bin" || exit 1
+        - dir "${{ PREFIX }}/Library/bin" || exit 1
       else:
-        - mkdir -p "$PREFIX/bin"
+        - mkdir -p "${{ PREFIX }}/bin"
         - chmod 755 bin/*
-        - cp bin/* "$PREFIX/bin"
-        - ls -lathr "$PREFIX/bin"
+        - cp bin/* "${{ PREFIX }}/bin"
+        - ls -lathr "${{ PREFIX }}/bin"
 
 requirements:
   run:
@@ -40,12 +40,12 @@ tests:
       run:
         - nodejs ${{ nodejs_min }}.*
     script:
-      - yarn --help
-      - yarn --version
-      - yarn --version | node -e "process.stdin.on('data', (d) => process.exit(d.toString().indexOf('${{ version }}')))"
-      - yarn init
-      - yarn add lodash
-      - yarn install --immutable --immutable-cache
+      - yarn --version                                                                                                   || exit 1
+      - yarn --version | node -e "process.stdin.on('data', (d) => process.exit(d.toString().indexOf('${{ version }}')))" || exit 1
+      - yarn init                                                                                                        || exit 1
+      - yarn add lodash                                                                                                  || exit 1
+      - yarn install --immutable --immutable-cache                                                                       || exit 1
+      - yarn --help                                                                                                      || exit 1
 
 about:
   license: BSD-2-Clause

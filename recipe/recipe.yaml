@@ -3,7 +3,8 @@ schema_version: 1
 
 context:
   version: 4.9.1
-  node_min: 18.12.0
+  # technically 18.12.0, but not available for testing
+  nodejs_min: 18.12.1
 
 package:
   name: yarn
@@ -22,24 +23,26 @@ build:
     - if: win
       then:
         - xcopy /s /y bin\* "%LIBRARY_BIN%"
+        - dir "%LIBRARY_BIN%"
       else:
-        - mkdir -p "{{ PREFIX }}/bin"
-        - cp bin/* "{{ PREFIX }}/bin"
+        - mkdir -p "$PREFIX/bin"
         - chmod 755 bin/*
+        - cp bin/* "$PREFIX/bin"
+        - ls -lathr "$PREFIX/bin"
 
 requirements:
   run:
     - __${{ noarch_platform }}
-    - nodejs >=${{ node_min }}
+    - nodejs >=${{ nodejs_min }}
 
 tests:
   - requirements:
       run:
-        - nodejs ${{ node_min }}.*
+        - nodejs ${{ nodejs_min }}.*
     script:
       - yarn --help
       - yarn --version
-      - yarn --version | node -e "process.stdin.on('data', (d) => process.exit(d.toString().indexOf('{{ version}}'))"
+      - yarn --version | node -e "process.stdin.on('data', (d) => process.exit(d.toString().indexOf('${{ version }}')))"
       - yarn init
       - yarn add lodash
       - yarn install --immutable --immutable-cache

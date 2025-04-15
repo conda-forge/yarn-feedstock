@@ -11,7 +11,8 @@ PKG_VERSION = os.environ["PKG_VERSION"]
 @pytest.fixture
 def yarn() -> str:
     exe = shutil.which("yarn") or shutil.which("yarn.cmd")
-    assert exe is not None, "couldn't find yarn"
+    assert exe is not None, "couldn't find yarn at all"
+    assert exe.startswith(sys.prefix), "this is not the yarn you are looking for"
     return exe
 
 
@@ -30,10 +31,11 @@ def test_basic_workflow(yarn: str, tmp_path: Path):
         [yarn, "add", "lodash"],
         [yarn, "install", "--immutable", "--immutable-cache"],
     ]
+
     for cmd in commands:
-        print(">>>", cmd)
-        rc = call(cmd, cwd=str(tmp_path))
-        assert rc == 0
+        print("\n", ">>>", *cmd, "\n", flush=True)
+        assert call(cmd, cwd=str(tmp_path)) == 0
+
     assert (tmp_path / "yarn.lock").exists()
 
 

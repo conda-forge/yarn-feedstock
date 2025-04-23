@@ -3,7 +3,7 @@ About yarn-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/yarn-feedstock/blob/main/LICENSE.txt)
 
-Home: https://yarnpkg.com
+Home: https://yarnpkg.com/
 
 Package license: BSD-2-Clause
 
@@ -16,7 +16,6 @@ Documentation: https://yarnpkg.com/getting-started
 Yarn is a package manager for your code. It allows you to use and share
 code with other developers from around the world. Yarn does this
 quickly, securely, and reliably so you don't ever have to worry.
-
 
 Current build status
 ====================

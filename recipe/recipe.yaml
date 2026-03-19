@@ -23,12 +23,10 @@ build:
     - if: win
       then:
         - xcopy /s /y bin\* "${{ PREFIX }}\Library\bin\"  || exit 1
-        - dir "${{ PREFIX }}\Library\bin\yarn.cmd"        || exit 1
       else:
         - mkdir -p "${{ PREFIX }}/bin"
         - chmod 755 bin/*
         - cp bin/* "${{ PREFIX }}/bin"
-        - ls -lathr "${{ PREFIX }}/bin"
 
 requirements:
   run:
@@ -36,6 +34,11 @@ requirements:
     - nodejs >=${{ nodejs_min }}
 
 tests:
+  - package_contents:
+      files:
+        - if: unix
+          then: bin/yarn
+          else: Library\bin\yarn.cmd
   - requirements:
       run:
         - nodejs ${{ nodejs_min }}.*

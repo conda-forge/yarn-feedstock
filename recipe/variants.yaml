@@ -5,3 +5,6 @@ noarch_platform:
   - if: win
     then:
       - win
+  - if: osx
+    then:
+      - unix

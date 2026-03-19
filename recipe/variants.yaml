@@ -1,0 +1,10 @@
+noarch_platform:
+  - if: linux
+    then:
+      - unix
+  - if: win
+    then:
+      - win
+  - if: osx
+    then:
+      - unix

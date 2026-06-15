@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.16.0"
+  version: "4.17.0"
   # technically 18.12.0, but not available for testing
   nodejs_min: 18.12.1
 
@@ -12,7 +12,7 @@ package:
 
 source:
   - url: https://registry.npmjs.org/@yarnpkg/cli-dist/-/cli-dist-${{ version }}.tgz
-    sha256: 22c53c0273df27ba5589a71240c93c5e470f86b11ff7b89f14edc7bec0c07c02
+    sha256: d55391c221c105ce32856466213470d583cb2bae7a000401bfb77191f92130bd
   - url: https://raw.githubusercontent.com/yarnpkg/berry/%40yarnpkg/cli/${{ version }}/LICENSE.md
     sha256: 238d933f5c226cc197bd1dae2ad0c468e157b4cba8ed844f81549ba6db777dc4
 

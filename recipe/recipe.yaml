@@ -17,14 +17,25 @@ source:
     sha256: 238d933f5c226cc197bd1dae2ad0c468e157b4cba8ed844f81549ba6db777dc4
 
 build:
-  number: 0
+  number: 1
   noarch: generic
   script:
+    # The upstream launcher ships as bin/yarn.js (a CommonJS bundle). Node
+    # resolves a file's module type from the nearest ancestor package.json, so
+    # inside a project that sets "type": "module" Node loads yarn.js as ESM and
+    # crashes with 'Dynamic require of "util" is not supported'. Renaming it to
+    # bin/yarn.cjs forces CommonJS regardless of any parent package.json; the
+    # shims are repointed to match. We avoid shipping a package.json marker in
+    # $PREFIX/bin because that directory is shared with other packages.
     - if: win
       then:
+        - move bin\yarn.js bin\yarn.cjs
+        - powershell -Command "@('bin\yarn','bin\yarn.cmd','bin\yarn.ps1') | ForEach-Object { (Get-Content $_) -replace 'yarn\.js','yarn.cjs' | Set-Content $_ }"
         - xcopy /s /y bin\* "${{ PREFIX }}\Library\bin\"  || exit 1
       else:
         - mkdir -p "${{ PREFIX }}/bin"
+        - mv bin/yarn.js bin/yarn.cjs
+        - sed -i.bak 's/yarn\.js/yarn.cjs/g' bin/yarn bin/yarn.cmd bin/yarn.ps1 && rm -f bin/*.bak
         - chmod 755 bin/*
         - cp bin/* "${{ PREFIX }}/bin"
 
